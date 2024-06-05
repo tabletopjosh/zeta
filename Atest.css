@@ -1,7 +1,9 @@
 #audioSection {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 400px;
     margin: 0px auto 0px auto;
     display: block;
+    background-image: url("EROSION.jpg");
+    padding: 30px;
     /* T R B L */
 }
