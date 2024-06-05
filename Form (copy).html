@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+    <html>
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width">
+            <title>Soil Erosio Chatbot</title>
+            <link href="style.css" rel="stylesheet" type="text/css" />
+            <link rel="icon" type="image/png" href="circle.png" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+              >
+        <link href="Form.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    header {
+      margin-top: 20px;
+         font-family: 'Poppins',  text-align: center;
+      background-color: #6aa84f;
+    }
+    .top-bar {
+        background-color: #6aa84f;
+         font-family: 'Poppins',  text-align: center;
+        padding: 20px;
+    }
+    .horizontal-nav {
+      display: flex;
+         font-family: 'Poppins',  text-align: center;
+      justify-content: space-around;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .horizontal-nav li {
+      display: inline;
+         font-family: 'Poppins',  text-align: center;
+      padding: 10px;
+    }
+    .horizontal-nav li a {
+      display: inline-block;
+         font-family: 'Poppins',  text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      transition: font-size 0.5s, color 1s;
+      width: 150px;
+      text-align: center;
+      font-family: 'Poppins';
+    }
+    .horizontal-nav li a:hover {
+      font-size: 25px;
+         font-family: 'Poppins',  text-align: center;
+      color: #d9ead3;
+    }
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .chatbox { max-width: 600px; margin: 0 auto; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    .message { margin-bottom: 10px; }
+    .user { color: blue; }
+    .bot { color: green; }
+  </style>
+          <style>
+            footer {
+              text-align: center;
+            }
+          </style>
+  <header>
+    <img src="logo.png" alt="soil" width=400; height=300; style="display: block; margin-left: auto; margin-right: auto;">
+    <div class="top-bar">
+      <ul class="horizontal-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">Presentation</a></li>  
+        <li><a href="meet.html">Meet the Team</a></li>
+        <li><a href="timeline.html">Timeline</a></li> 
+        <li><a href="material.html">Materials</a></li> 
+        <li><a href="salesmarket.html">Sales and Marketing </a></li> 
+        <li><a href="Form (copy)">Which soil best suits you?</a></li>
+        <!-- <li><a href="contact.html">Contact Us</a></li> 
+        <li><a href="contact.html">Contact Us</a></li> 
+ <li><a href="information.html">Information</a></li>
+  <li><a href="solve.html">How to solve</a></li>
+        <li><a href="form.html">Forms</a></li> -->
+      </ul>
+    </div>
+  </header> 
+  </head>       
+      <body>
+        <div class="chatbox" id="chatbox">
+          <div class="message bot">Hello! What is the soil moisture and pH of the soil?</div>
+        </div>
+        <input type="text" id="userInput" placeholder="Type your message here..." style="width: 100%; padding: 10px;">
+        <button onclick="sendMessage()">Send</button>
+
+        <script>
+          async function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            const chatbox = document.getElementById('chatbox');
+
+            // Display user's message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.textContent = userInput;
+            chatbox.appendChild(userMessage);
+
+            // Send user's message to the server
+            const response = await fetch('/chat', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ message: userInput })
+            });
+
+            const data = await response.json();
+
+            // Display bot's response
+            const botMessage = document.createElement('div');
+            botMessage.className = 'message bot';
+            botMessage.textContent = data.reply;
+            chatbox.appendChild(botMessage);
+
+            // Clear the input
+            document.getElementById('userInput').value = '';
+          }
+        </script>
+      </body>
+</html>
+

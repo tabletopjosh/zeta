@@ -1,0 +1,118 @@
+p {
+  outline-color:LimeGreen;
+  font-family: 'Poppins';
+  text-align: center;
+}
+
+.dashed {
+  outline-style: dashed;
+}
+
+html {
+box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+box-sizing: inherit;
+}
+
+.column {
+float: left;
+width: 33.3%;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+.column {
+  width: 100%;
+  display: block;
+}
+
+  header {
+    margin-top: 20px;
+    background-color: #6aa84f;
+  }
+  .top-bar {
+      background-color: #6aa84f;
+      padding: 20px;
+  }
+  .horizontal-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .horizontal-nav li {
+    display: inline;
+    padding: 10px;
+  }
+  .horizontal-nav li a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: font-size 0.5s, color 1s;
+    width: 150px;
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif
+  }
+
+.horizontal-nav li a:hover {
+    font-size: 25px;
+    color: #d9ead3;
+}
+
+a{
+        transition: font-size 2s, color 2s}
+      a: hover{ font-size: 18px; 
+  color: BurlyWood;}
+      a { color: Black; text-decoration: none; text-shadow: 2px 2px 4px rbg(0, 0, 0, 0.5);
+        }
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: DarkSeaGreen;
+    color: white;
+  }
+
+
+
+hr{
+        height: 2px;
+        color: green;
+      }
+
+      article {
+        width: 100%;
+        height: auto;
+      }
+      section::after {
+      content: "";
+      display: table;
+      clear: both;
+
+      p{font-size: 25px;}
+      h1{font-size: 50px;}
+
+      {
+        font-family: "Georgia", Times, serif;  text-align: center;font-size: 45px;
+      }
+
+        footer {
+          text-align: center;
+          padding: 3px;
+          background-color: DarkSeaGreen;
+          color: white;
+          font-family: 'Poppins',  text-align: center;
+        }
+
+        a{
+          transition: font-size 2s, color 2s}
+        a: hover{ font-size: 18px; color: BurlyWood;}
+        a { color: Black; text-decoration: none; text-shadow: 2px font-family: 'Poppins',  text-align: center;
+            2px 4px rbg(0, 0, 0, 0.5);}
