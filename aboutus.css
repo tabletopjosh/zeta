@@ -204,3 +204,8 @@ html {
     audio {
       border: 1px solid black;
     }
+
+    .container {
+      position: relative;
+      width: 50%;
+    }
