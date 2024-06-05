@@ -90,25 +90,31 @@
   <body>
     <center><h1>slide show presentation</h1></center>
 
-    <center>
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img src="FRONTSLIDE.png" style="width: 80%" />
+    <section>
+      <center>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="FRONTSLIDE.png" style="width: 80%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="Aslide.png" style="width: 80%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="AAslide.png" style="width: 80%" />
+          </div>
+          <!-- Add more slides as needed -->
         </div>
-        <div class="mySlides fade">
-          <img src="Aslide.png" style="width: 80%" />
+        <br />
+        <div style="text-align: center">
+          <button class="nav-button" onclick="plusSlides(-1)">Back</button>
+          <button class="nav-button" onclick="plusSlides(1)">Next</button>
         </div>
-        <div class="mySlides fade">
-          <img src="AAslide.png" style="width: 80%" />
-        </div>
-        <!-- Add more slides as needed -->
-      </div>
-      <br />
-      <div style="text-align: center">
-        <button class="nav-button" onclick="plusSlides(-1)">Back</button>
-        <button class="nav-button" onclick="plusSlides(1)">Next</button>
-      </div>
-    </center>
+      </center>
+    </section>
+
+    <p>I really enjoyed reading <cite>The Great Gatsby</cite> by F. Scott Fitzgerald.</p>
+    <p>This is an example of using the <code>&lt;code&gt;</code> tag in HTML.</p>
+    
 
     <h1>Audio File Example</h1>
     <audio id="audioSection" controls>

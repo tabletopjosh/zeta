@@ -6,4 +6,6 @@
     background-image: url("EROSION.jpg");
     padding: 30px;
     /* T R B L */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* horizontal-offset vertical-offset blur spread color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* horizontal-offset vertical-offset blur color */
 }
